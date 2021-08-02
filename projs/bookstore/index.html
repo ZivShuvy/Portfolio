@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>My Book Shop</title>
+</head>
+
+<body onload="onInit()">
+    <div class="header">
+        <span>My Book store</span>
+    </div>
+    <button class="create-book" onclick="onCreateBook()">Create new book</button>
+    <div class="add-book" hidden>
+        <input name="newBookName" type="text" placeholder="Book name" />
+        <input name="newBookPrice" type="text" placeholder="Book price ($)" />
+        <button onclick="onAddBook()">Add</button> <br>
+        <span></span>
+    </div>
+    <div class="update-book-modal" hidden>
+        <input name="updateBookPrice" type="text" placeholder="New book price ($)" /> <br>
+        <button onclick="onSaveUpdate()">Save Changes</button> <br>
+        <span></span>
+        <button class="close" onclick="onCloseUpdateBookModal()">&#x2716</button>
+    </div>
+    <table class="books-list">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td class="name-sort" onclick="onSortByName()">
+                    Title
+                    <img src="img/filter-on.png">
+                </td>
+                <td class="price-sort" onclick="onSortByPrice()">
+                    Price
+                    <img src="img/filter-off.png">
+                </td>
+                <td>Rate</td>
+                <td colspan="3">Actions</td>
+            </tr>
+        </thead>
+        </thead>
+        <tbody class="books-data">
+        </tbody>
+    </table>
+    <div class="read-modal" hidden>
+        <button class="close" onclick="onCloseReadModal()">&#x2716</button>
+        <h1></h1>
+        <img src=''>
+        <h2></h2>
+        <p></p>
+        <h3>Change Rate:</h3>
+        <div class="rate">
+            <button onclick="onIncreaseRate()">&#x2b</button>
+            <span></span>
+            <button onclick="onDecreaseRate()">&#x2212</button>
+        </div>
+    </div>
+    <div class="page-btns"></div>
+
+    <script src="js/utils-service.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/book-service.js"></script>
+    <script src="js/book-controller.js"></script>
+</body>
+
+</html>

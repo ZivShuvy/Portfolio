@@ -7,6 +7,20 @@ function initPage() {
     renderProjects();
 }
 
+function onSubmitMsg() {
+    var subject = document.querySelector('[name=subject]').value;
+    var msg = document.querySelector('[name=msg]').value;
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=zivshuvy121@gmail.com&su=${subject}&body=${msg}&bcc=zivshuvy123@hotmail.com`);
+    document.querySelector('[name=subject').value = '';
+    document.querySelector('[name=msg]').value = '';
+    document.querySelector('[name=email]').value = '';
+}
+
+function openProj() {
+    if (gCurrProj.id === 'minesweeper') window.open(`${gCurrProj.url}/homepage.html`)
+    else window.open(`${gCurrProj.url}/index.html`)
+}
+
 function getBadgesHTML() {
     var strHTML = '';
     gCurrProj.labels.forEach(function (label) {
@@ -21,7 +35,8 @@ function renderProjModal() {
     <img class="img-fluid d-block mx-auto" src="img/portfolio/${gCurrProj.id}.jpg" alt="">
     <p>${gCurrProj.desc}</p>
     <ul class="list-inline">
-      <li>Date: ${getFormattedDate(gCurrProj.publishedAt)}</li>
+    <li><span class="text-primary" style="cursor:pointer" onclick="openProj()">Open Project</span></li>
+    <li>Date: ${getFormattedDate(gCurrProj.publishedAt)}</li>
       <li>${getBadgesHTML()}</li>
     </ul>
     <button class="btn btn-primary" data-dismiss="modal" type="button">
@@ -75,6 +90,13 @@ function createProjects() {
         'projs/minesweeper',
         new Date(2021, 6, 19).getTime(),
         ['Matrixes', 'Mouse events']));
+        gProjs.push(createProject('bookstore',
+        'My Book Store',
+        'Manage your book store easily',
+        'Tired of managing your physical book store? Now you can just manage it online without getting out of home! Updating your books\' prices or adding a new books are just some of our great features. Give us a try! ',
+        'projs/bookstore',
+        new Date(2021, 7, 19).getTime(),
+        ['MVC', 'CRUD']));
 }
 
 function createProject(id, name, title, desc, url, publishedAt, labels) {
@@ -94,7 +116,6 @@ function getFormattedDate(timestamp) {
         "July", "August", "September", "October", "November", "December"
     ];
     var date = new Date(timestamp);
-    console.log(date);
     var formattedDate = monthNames[date.getMonth()] + ' ' + date.getFullYear();
     return formattedDate;
 }

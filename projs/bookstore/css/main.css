@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gisha';
+    background-color: #ffffff;
+    margin: 0;
+    text-align: center;
+}
+
+.header {
+    background-color: #f5f5f5b0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 30px;
+    color: #e03863;
+    border-bottom: 1px solid lightgray;
+}
+
+.create-book {
+    text-align: center;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    background-color: transparent;
+    border: none;
+    font-family: 'Gisha';
+    font-size: 16px;
+    color: #ff4171;
+    cursor: pointer;
+}
+
+.add-book {
+    margin-top: 10px;
+}
+
+.add-book input, .update-book-modal input {
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+    box-shadow: inset 2px 2px 2px #b1b1b1, inset -2px -2px 2px #b1b1b1;
+    margin-bottom: 5px;
+}
+
+.add-book button, .update-book-modal button:not(.close) {
+    height: 35px;
+    width: 50px;
+    background-color: #0000008c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Gisha';
+    border-radius: 5px;
+}
+
+.add-book button:hover, .update-book-modal button:hover:not(.close) {
+    background-color: #000000be;
+}
+
+.update-book-modal {
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ff4171;
+    z-index: 5;
+}
+
+.update-book-modal button:not(.close) {
+    width: 150px;
+}
+
+.update-book-modal input {
+    display: block;
+    margin: auto;
+}
+
+.close {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.read-modal {
+    background-color: #fff;
+    border: 4px solid gray;
+    width: 40%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+}
+
+.read-modal p {
+    padding: 0px 30px;
+}
+
+.read-modal img {
+    height: 40%;
+    width: auto;
+}
+
+.rate {
+    font-size: 20px;
+    background-color: #fff;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 5px 10px;
+    border: 1px solid gray;
+}
+
+.rate button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.rate span {
+    border-right: 1px solid gray;
+    border-left: 1px solid gray;
+    padding: 5px 20px;
+    color: #ff4171
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+thead td:nth-child(2), thead td:nth-child(3) {
+    cursor: pointer;
+}
+
+table, td, tr {
+    padding: 20px;
+    margin: auto;
+    text-align: center;
+    font-size: 18px;
+}
+
+table {
+    box-shadow: 10px 10px 20px #f0f2f5, -10px -10px 20px #f0f2f5;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+td {
+    border-bottom: 1px solid #d6d6d6;
+    width: 150px;
+    height: 50px;
+}
+
+td button {
+    background-color: #ff4171;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Gisha';
+}
+
+td button:hover {
+    background-color: #d10d3e;
+}
+
+thead {
+    font-weight: bold;
+}
+
+td img {
+    width: 15px;
+    height: auto;
+}
+
+.page-btns {
+    text-align: center;
+    background-color: #fff;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    border: 1px solid lightgray;
+    border-right: 0px;
+}
+
+.page-btns button {
+    background-color: transparent;
+    border: none;
+    font-family: 'Gisha';
+    font-size: 16px;
+    padding: 5px 10px;
+    border-right: 1px solid lightgray;
+    color: #707070;
+    cursor: pointer;
+}
+
+.page-btns button:hover {
+    background-color: #dddddd86;
+}

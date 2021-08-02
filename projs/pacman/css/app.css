@@ -1,0 +1,45 @@
+body {
+  background-color: black;
+  color:white;
+  text-align: center;
+}
+
+table {
+  margin: auto;
+}
+.cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.cell img {
+  width:25px; 
+  height:auto
+}
+
+#wall {
+  background-color: rgb(8, 138, 138);
+}
+
+.modal {
+  background-color: rgb(165, 154, 0);
+  display:none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px;
+  width: 330px;
+  height: 170px;
+}
+
+button {
+  background-color: black;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  height: 40px;
+  width: 100px;
+}
